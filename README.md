@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DocVisit - Doctor Home Visit & Medical Assistance Web App
 
-## Getting Started
+## Overview
+**DocVisit** is a fully responsive web application that connects users with certified doctors for home visits in India. The application allows users to request doctors based on medical conditions or symptoms, track their doctor's real-time location, and explore specialized care options nearby. Built using **Next.js** and **Tailwind CSS**, this app offers a seamless experience for users to access healthcare from the comfort of their homes.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🧑‍⚕️ Core Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 1. Doctor On-Demand Request
+- **Upload Medical Reports**: Users can upload medical reports in various formats (PDF, JPG, PNG, etc.).
+- **Describe Symptoms**: Users can describe their symptoms through a text form.
+- **Automated Assignment**: After submission, the system analyzes the medical report/description (simple text-based filtering or placeholder for AI model) and automatically assigns a nearby available doctor based on their specialization.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 2. Real-Time Tracking
+- **Live Location Tracking**: Shows the assigned doctor's live location on a map.
+- **Estimated Arrival Time**: Displays the estimated time of arrival for the doctor.
+- **Doctor's Details**: Shows the doctor's name, photo, specialization, rating, and contact information.
+- **Real-Time Tracking**: Both user and doctor locations are tracked in real-time using web sockets or polling.
 
-## Learn More
+### 🏥 Specialty-Based Recommendations
 
-To learn more about Next.js, take a look at the following resources:
+#### 3. Specialized Care Discovery
+- **Browse and Explore Doctors**: Users can explore top-rated doctors and hospitals nearby based on their conditions:
+  - Diabetes (Sugar)
+  - Cardiac (Heart) issues
+  - Gastro (Stomach) issues
+  - Liver problems
+  - Dental (Teeth) issues
+- **Filters**: Users can filter by:
+  - Location (using pincode or map)
+  - Ratings, proximity, and availability
+  - Specialization (Diabetes, Cardiac, etc.)
+  
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Optional Add-ons for Better UX
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 4. Authentication & Profiles
+- **User Authentication**: Users can authenticate using phone/email or OTP.
+- **Separate Dashboards**: Both user and doctor have personalized dashboards.
+- **Profile Management**: Users can store previous reports, history of visits, and payment receipts.
 
-## Deploy on Vercel
+#### 5. Doctor Panel
+- **Request Management**: Doctors can accept or decline visit requests.
+- **Availability Toggle**: Doctors can toggle their availability status.
+- **Profile Setup**: Doctors can upload qualifications and set their specialization.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 6. Admin Panel
+- **Doctor & Hospital Management**: Admin can add and manage doctors and hospitals.
+- **Credential Verification**: Admin verifies doctor credentials before allowing them to accept requests.
+- **Active Visit Tracking**: Admin can track active visits and view system analytics.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Technologies Used
+- **Frontend**: Next.js, Tailwind CSS (No third-party UI libraries)
+- **Backend**: (Could be a backend tech of your choice, e.g., Node.js, Express, or others if included)
+- **Real-time**: WebSockets or Polling for real-time location tracking
+- **Authentication**: Phone/email OTP (For User and Doctor login)
+- **Database**: (If relevant, e.g., MongoDB, PostgreSQL, etc.)
+
+---
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/hsnaf/DocVisit.git
